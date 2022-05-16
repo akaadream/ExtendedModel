@@ -9,7 +9,7 @@ No more big array of model properties' initialization !
 
 You have to require this package using composer:
 ```
-composer require akadream/extendedmodel
+composer require akaadream/extendedmodel
 ```
 
 ### Usage
