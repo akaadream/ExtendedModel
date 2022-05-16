@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Akaadream\ExtendedModel\ExtendedModel;
+
+class {{ class }} extends ExtendedModel
+{
+    //
+}

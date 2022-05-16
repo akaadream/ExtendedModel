@@ -1,0 +1,34 @@
+{
+    "name": "akaadream/extendedmodel",
+    "description": "ExtendedModel - A better experience with Laravel models",
+    "keywords": ["laravel", "model", "eloquent", "extended"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Akaadream\\ExtendedModel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guillaume Lortet",
+            "email": "lortet.guillaume@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4",
+        "illuminate/database": "^6|^7|^8|^9",
+        "illuminate/http": "^6|^7|^8|^9",
+        "illuminate/support": "^6|^7|^8|^9",
+        "illuminate/console": "^6|^7|^8|^9",
+        "illuminate/contracts": "^6|^7|^8|^9"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Akaadream\\ExtendedModel\\ExtendedModelProvider"
+            ]
+        }
+    }
+}
