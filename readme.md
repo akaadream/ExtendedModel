@@ -12,25 +12,16 @@ You have to require this package using composer:
 composer require akadream/extendedmodel
 ```
 
-You will now need to add the service provider to the providers array of your `config/app.php`
-```
-Akadream\ExtendedModel\ExtendedModelProvider::class,
-```
-
-You can also replace the default command `php artisan make:model` with `php artisan make:extendedmodel` by copying the package configuration:
-```
-php artisan vendor:publish --provider="Akadream\ExtendedModel\ExtendedModelProvider"
-```
-
 ### Usage
 
-The usage of Laravel Extended Model is very simple. You just have to create a model extending the ExtendedModel class:
+You can replace the default command `php artisan make:model` with `php artisan make:extendedmodel` to create quickly an extended model.
+For example, `php artisan make:extendedmodel MyModel` will give you this class:
 ```php
 use \Akaadream\ExtendedModel\ExtendedModel;
 
 class MyModel extends ExtendedModel
 {
-    
+    //
 }
 ```
 
@@ -44,6 +35,16 @@ public function store (Request $request)
 }
 ```
 
-You can also put an array of options if you want to attribute a specific value for any of the model property:
-```
+Take in consideration that all the requested inputs have to follow the exact same name of the model property. So if your model have a property `name`, the method will try to find `$request->input('name')`.
+
+You can also put an array of options at the third parameter of the method if you want to attribute a specific value for any of the model property.
+For example, if you have to upload a file, and then, you want to put inside you model the filename inside an image property, you can do:
+```php
+public function store (Request $request)
+{
+    $filename = "extendedmodelimage.png";
+    // ... image upload
+
+    MyModel::createOrUdateWith(new MyModel, $request, ['image' => $filename]);
+}
 ```
