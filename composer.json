@@ -18,11 +18,11 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
-        "illuminate/database": "^v11.4.0",
-        "illuminate/http": "^v11.4.0",
-        "illuminate/support": "^v11.4.0",
-        "illuminate/console": "^v11.4.0",
-        "illuminate/contracts": "^v11.4.0"
+        "illuminate/database": "v11.4.0",
+        "illuminate/http": "v11.4.0",
+        "illuminate/support": "v11.4.0",
+        "illuminate/console": "v11.4.0",
+        "illuminate/contracts": "v11.4.0"
     },
     "extra": {
         "laravel": {
