@@ -17,7 +17,7 @@ class ExtendedModel extends Model
      * @param array $options
      * @return ExtendedModel
      */
-    public static function createOrUpdateWith(ExtendedModel $instance, Request $request, array $options = [])
+    public static function createOrUpdateWith(ExtendedModel $instance, Request $request, array $options = []): ExtendedModel
     {
         foreach ($request->all() as $key => $value)
         {
